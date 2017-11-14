@@ -13,14 +13,14 @@ public class DataBase {
     }
 
     public boolean addToDb(ComputerGame game) {
-        if(games.add(game)){
+        if(games.add(game)) {
             return true;
         }
         return false;
     }
 
     public boolean addToDb(ArrayList<ComputerGame> games) {
-        if(this.games.addAll(games)){
+        if(this.games.addAll(games)) {
             return true;
         }
         return false;

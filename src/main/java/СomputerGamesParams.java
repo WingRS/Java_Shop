@@ -88,8 +88,9 @@ public class СomputerGamesParams {
         return price;
     }
 
-    public void setPrice(float price) {
+    public boolean setPrice(double price) {
         this.price = price;
+        return true;
     }
 
     public Platforms getPlatform() {

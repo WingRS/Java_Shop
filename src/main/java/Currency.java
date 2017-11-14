@@ -2,7 +2,7 @@
  * Created by StasMaster on 13.11.17.
  */
 public enum Currency {
-    UAH("uah"), USD("USD"),POUND("British Pound");
+    UAH("uah"), USD("USD"), POUND("British Pound");
 
     private String name;
 

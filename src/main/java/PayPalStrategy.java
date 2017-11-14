@@ -10,4 +10,9 @@ public class PayPalStrategy implements PaymentStrategy  {
         return  false;
     }
 
+    @Override
+    public String toString() {
+        return paymentName;
+    }
+
 }

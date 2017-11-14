@@ -6,4 +6,6 @@ public interface PaymentStrategy {
 
     boolean pay(double price);
 
+    String toString();
+
 }

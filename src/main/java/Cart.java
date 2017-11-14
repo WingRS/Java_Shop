@@ -11,7 +11,35 @@ public class Cart {
 
     private DeliveryStrategy delivery;
 
-    private ArrayList<ComputerGame> games;
+    private ArrayList<ComputerGame> games = new ArrayList<>();
+
+    public Cart( ArrayList<ComputerGame> games, Customer customer) {
+        this.games = games;
+        this.customer = customer;
+    }
+
+    public Cart(Customer customer) {
+        this.customer =customer;
+    }
+
+    public Cart(Customer customer, ArrayList<ComputerGame> games, PaymentStrategy payStrat, DeliveryStrategy delStrat) {
+        this.customer = customer;
+        this.games = games;
+        this.delivery = delStrat;
+        this.payment = payStrat;
+    }
+
+    public Cart(Customer customer, ComputerGame game, PaymentStrategy payStrat, DeliveryStrategy delStrat) {
+        this.customer = customer;
+        this.games.add(game);
+        this.delivery = delStrat;
+        this.payment = payStrat;
+    }
+
+    public Cart(Customer customer, ComputerGame game){
+        this.customer = customer;
+        this.games.add(game);
+    }
 
     public PaymentStrategy getPayment() {
         return payment;
@@ -38,7 +66,7 @@ public class Cart {
     }
 
     public boolean removeGameFromCart(ComputerGame game) {
-        if(this.games.contains(game)){
+        if(this.games.contains(game)) {
             this.games.remove(game);
             return true;
         }
@@ -60,8 +88,8 @@ public class Cart {
         return price;
     }
 
-    public void ship(){
-        if(payment.pay(computeTotalPrice())){
+    public void ship() {
+        if(payment.pay(computeTotalPrice())) {
             delivery.delivery(games);
         }
     }

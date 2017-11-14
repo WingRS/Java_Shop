@@ -11,6 +11,21 @@ public class Customer {
     private Currency currency;
     private ArrayList<ComputerGame> games = new ArrayList<ComputerGame>();
 
+
+    public Customer(String name, String city){
+        this.name = name;
+        this.city = city;
+    }
+
+    public Customer(String name, String city, double money, Currency currency, ComputerGame game){
+        this.name = name;
+        this.city = city;
+        this.money = money;
+        this.currency = currency;
+        this.games.add(game);
+    }
+
+
     public String getName() {
         return name;
     }
@@ -31,7 +46,7 @@ public class Customer {
         return money;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         this.money = money;
     }
 
@@ -48,8 +63,7 @@ public class Customer {
     }
 
     public boolean addGameToHistory(ComputerGame game) {
-        if(games.add(game))
-        {
+        if(games.add(game)) {
             return true;
         }
         return false;
@@ -57,8 +71,7 @@ public class Customer {
 
 
     public boolean payForGame(double price) {
-        if(money - price > 0)
-        {
+        if(money - price > 0) {
             money = money - price;
             return  true;
         }
