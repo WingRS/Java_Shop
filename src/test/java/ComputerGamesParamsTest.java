@@ -7,9 +7,9 @@ import static org.junit.Assert.assertFalse;
 /**
  * Created by StasMaster on 13.11.17.
  */
-public class сomputerGamesParamsTest {
+public class ComputerGamesParamsTest {
 
-    private СomputerGamesParams param1, param2;
+    private ComputerGamesParams param1, param2;
 
     @Before
     public void setUp() throws Exception {

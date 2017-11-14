@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 /**
  * Created by StasMaster on 13.11.17.
  */
-public class сomputerGameTest {
+public class ComputerGameTest {
     private ComputerGame game1, game2;
 
 
