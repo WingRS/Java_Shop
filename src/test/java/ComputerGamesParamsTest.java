@@ -11,7 +11,7 @@ import static org.junit.Assert.assertFalse;
  */
 public class ComputerGamesParamsTest {
 
-    private ComputerGamesParams param1, param2;
+    private сomputerGamesParams param1, param2;
 
     @Before
     public void setUp() throws Exception {

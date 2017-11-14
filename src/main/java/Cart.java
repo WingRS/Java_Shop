@@ -39,16 +39,16 @@ public class Cart {
 
 
     public boolean addGameToCart(ComputerGame game) {
-        if(games.add(game)){
-            return true;
+        if (!games.add(game)) {
+            return false;
         }
-        return false;
+        return true;
     }
 
     public double computeTotalPrice() {
-        double price = 0 ;
+        double price = 0;
         for (ComputerGame curInstance: games) {
-            price += curInstance.getParams().getPrice()  ;
+            price += curInstance.getParams().getPrice();
         }
         return price;
     }

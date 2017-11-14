@@ -4,13 +4,11 @@
 public class ComputerGame {
 
     private static int Idcounter = 0;
-    private final int id = Idcounter++;
-
 
     private final int gameId;
-    private final ComputerGamesParams params;
+    private final сomputerGamesParams params;
 
-    public ComputerGame(ComputerGamesParams gameParams) {
+    public ComputerGame(сomputerGamesParams gameParams) {
         this.gameId = ComputerGame.Idcounter++;
         this.params = gameParams;
     }
@@ -19,7 +17,7 @@ public class ComputerGame {
         return gameId;
     }
 
-    public ComputerGamesParams getParams() {
+    public сomputerGamesParams getParams() {
         return params;
     }
 
