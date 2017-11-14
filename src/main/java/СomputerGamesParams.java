@@ -19,7 +19,7 @@ public class СomputerGamesParams {
 
 
 
-    public СomputerGamesParams(СomputerGame game) {
+    public СomputerGamesParams(ComputerGame game) {
         this.name = game.getParams().getName();
         this.genre = game.getParams().getGenre();
         this.descr = game.getParams().getDescr();
@@ -28,7 +28,10 @@ public class СomputerGamesParams {
         this.ageRestriction = game.getParams().getAgeRestriction();
     }
 
-    public СomputerGamesParams(String name, Genre genre, String descr, Double price, Platforms platform, int ageRestriction ) {
+    public СomputerGamesParams(String name, Genre genre,
+                               String descr, Double price,
+                               Platforms platform,
+                               int ageRestriction) {
 
 
         this.name = name;
@@ -43,10 +46,13 @@ public class СomputerGamesParams {
 
 
     public boolean check(СomputerGamesParams otherParams) {
-        if ((name.equals(otherParams.getName())) || (ageRestriction == otherParams.getAgeRestriction())
-                || (price == otherParams.getPrice())  ||
-                ((genre.equals(otherParams.getGenre())) && otherParams.getGenre().equals(genre))
-                || ((platform.equals(otherParams.getPlatform())  && otherParams.getPlatform().equals(platform)))) {
+        if ((name.equals(otherParams.getName()))
+                || (ageRestriction == otherParams.getAgeRestriction())
+                || (price == otherParams.getPrice())
+                || ((genre.equals(otherParams.getGenre()))
+                && otherParams.getGenre().equals(genre))
+                || ((platform.equals(otherParams.getPlatform())
+                && otherParams.getPlatform().equals(platform)))) {
             return false;
         }
         return true;

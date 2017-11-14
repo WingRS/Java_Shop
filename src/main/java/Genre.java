@@ -15,5 +15,10 @@ public enum Genre {
     public String toString() {
         return name;
     }
+
+
+    public String getName() {
+        return name;
+    }
 }
 

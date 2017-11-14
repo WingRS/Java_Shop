@@ -4,7 +4,7 @@
 public enum Currency {
     UAH("uah"), USD("USD"),POUND("British Pound");
 
-    String name;
+    private String name;
 
     Currency(String s) {
         this.name = s;
@@ -12,6 +12,11 @@ public enum Currency {
 
     @Override
     public String toString() {
+        return name;
+    }
+
+
+    public String getName() {
         return name;
     }
 
