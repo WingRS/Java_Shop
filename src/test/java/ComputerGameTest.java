@@ -22,6 +22,13 @@ public class ComputerGameTest {
     }
 
     @Test
+    public void testParams(){
+        assertTrue( game1.getParams().getName() == GamesForTests.GameParams1().getName() );
+    }
+
+
+
+    @Test
     public void getGameId() throws Exception {
     }
 

@@ -21,7 +21,7 @@ public class ComputerGamesParamsTest {
 
     @Test
     public void checkTest() throws Exception {
-        assertFalse(param1.check(param2));
+        assertTrue(param1.check(param2));
     }
 
 

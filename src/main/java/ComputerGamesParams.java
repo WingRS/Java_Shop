@@ -47,9 +47,9 @@ public class ComputerGamesParams {
                 || (Price == otherParams.getPrice())  ||
                 ((Genre.equals(otherParams.getGenre())) && otherParams.getGenre().equals(Genre))
                 || ((Platform.equals(otherParams.getPlatform())  && otherParams.getPlatform().equals(Platform)))) {
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 
 
