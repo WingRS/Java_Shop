@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by StasMaster on 13.11.17.
@@ -11,7 +9,7 @@ public class Customer {
     private String city;
     private double money;
     private Currency currency;
-    private ArrayList<ComputerGame> games = new ArrayList<ComputerGame>();
+    private ArrayList<сomputerGame> games = new ArrayList<сomputerGame>();
 
     public String getName() {
         return name;
@@ -45,11 +43,11 @@ public class Customer {
         this.currency = currency;
     }
 
-    public ArrayList<ComputerGame> getGames() {
+    public ArrayList<сomputerGame> getGames() {
         return  new ArrayList<>(games);
     }
 
-    public boolean addGameToHistory(ComputerGame game) {
+    public boolean addGameToHistory(сomputerGame game) {
         if(games.add(game)) {
             return true;
         }

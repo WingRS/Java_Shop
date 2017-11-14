@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -7,20 +6,20 @@ import java.util.List;
  */
 public class DataBase {
 
-    private static List<ComputerGame> games = new ArrayList<ComputerGame>();
+    private static List<сomputerGame> games = new ArrayList<сomputerGame>();
 
     public DataBase() {
 
     }
 
-    public ArrayList<ComputerGame> getGamges() {
-        return new ArrayList<ComputerGame>(games);
+    public ArrayList<сomputerGame> getGamges() {
+        return new ArrayList<сomputerGame>(games);
     }
 
 
-    public ArrayList<ComputerGame>  search(ComputerGamesParams searched) {
-        ArrayList<ComputerGame> found = new ArrayList<ComputerGame>();
-        for (ComputerGame game: games) {
+    public ArrayList<сomputerGame>  search(ComputerGamesParams searched) {
+        ArrayList<сomputerGame> found = new ArrayList<сomputerGame>();
+        for (сomputerGame game: games) {
             if (game.getParams().check(searched)) {
                 found.add(game);
             }

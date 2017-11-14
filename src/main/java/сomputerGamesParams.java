@@ -19,7 +19,7 @@ public class сomputerGamesParams {
 
 
 
-    public сomputerGamesParams(ComputerGame game) {
+    public сomputerGamesParams(сomputerGame game) {
         this.name = game.getParams().getName();
         this.genre = game.getParams().getGenre();
         this.descr = game.getParams().getDescr();

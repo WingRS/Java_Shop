@@ -1,15 +1,15 @@
 /**
  * Created by StasMaster on 06.11.17.
  */
-public class ComputerGame {
+public class сomputerGame {
 
     private static int Idcounter = 0;
 
     private final int gameId;
     private final сomputerGamesParams params;
 
-    public ComputerGame(сomputerGamesParams gameParams) {
-        this.gameId = ComputerGame.Idcounter++;
+    public сomputerGame(сomputerGamesParams gameParams) {
+        this.gameId = сomputerGame.Idcounter++;
         this.params = gameParams;
     }
 

@@ -9,7 +9,7 @@ import static org.junit.Assert.assertFalse;
 /**
  * Created by StasMaster on 13.11.17.
  */
-public class ComputerGamesParamsTest {
+public class сomputerGamesParamsTest {
 
     private сomputerGamesParams param1, param2;
 
