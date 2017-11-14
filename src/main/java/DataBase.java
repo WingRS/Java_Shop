@@ -17,7 +17,8 @@ public class DataBase {
     }
 
 
-    public ArrayList<сomputerGame>  search(ComputerGamesParams searched) {
+    public ArrayList<сomputerGame>  search(сomputerGamesParams searched) {
+
         ArrayList<сomputerGame> found = new ArrayList<сomputerGame>();
         for (сomputerGame game: games) {
             if (game.getParams().check(searched)) {
