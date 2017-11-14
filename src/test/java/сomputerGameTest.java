@@ -7,13 +7,13 @@ import static org.junit.Assert.*;
  * Created by StasMaster on 13.11.17.
  */
 public class сomputerGameTest {
-    private сomputerGame game1, game2;
+    private СomputerGame game1, game2;
 
 
     @Before
     public void setUp() throws Exception {
-        game1 = new сomputerGame( GamesForTests.GameParams1());
-        game2 = new сomputerGame( GamesForTests.GameParams2());
+        game1 = new СomputerGame( GamesForTests.GameParams1());
+        game2 = new СomputerGame( GamesForTests.GameParams2());
     }
 
     @Test

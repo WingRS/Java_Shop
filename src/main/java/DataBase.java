@@ -6,21 +6,21 @@ import java.util.List;
  */
 public class DataBase {
 
-    private static List<сomputerGame> games = new ArrayList<сomputerGame>();
+    private static List<СomputerGame> games = new ArrayList<СomputerGame>();
 
     public DataBase() {
 
     }
 
-    public ArrayList<сomputerGame> getGamges() {
-        return new ArrayList<сomputerGame>(games);
+    public ArrayList<СomputerGame> getGamges() {
+        return new ArrayList<СomputerGame>(games);
     }
 
 
-    public ArrayList<сomputerGame>  search(сomputerGamesParams searched) {
+    public ArrayList<СomputerGame>  search(СomputerGamesParams searched) {
 
-        ArrayList<сomputerGame> found = new ArrayList<сomputerGame>();
-        for (сomputerGame game: games) {
+        ArrayList<СomputerGame> found = new ArrayList<СomputerGame>();
+        for (СomputerGame game: games) {
             if (game.getParams().check(searched)) {
                 found.add(game);
             }

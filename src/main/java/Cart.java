@@ -11,7 +11,7 @@ public class Cart {
 
     private DeliveryStrategy delivery;
 
-    private ArrayList<сomputerGame> games;
+    private ArrayList<СomputerGame> games;
 
     public PaymentStrategy getPayment() {
         return payment;
@@ -38,7 +38,7 @@ public class Cart {
     }
 
 
-    public boolean addGameToCart(сomputerGame game) {
+    public boolean addGameToCart(СomputerGame game) {
         if (!games.add(game)) {
             return false;
         }
@@ -47,7 +47,7 @@ public class Cart {
 
     public double computeTotalPrice() {
         double price = 0;
-        for (сomputerGame curInstance: games) {
+        for (СomputerGame curInstance: games) {
             price += curInstance.getParams().getPrice();
         }
         return price;

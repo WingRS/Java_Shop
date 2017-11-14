@@ -9,7 +9,7 @@ public class Customer {
     private String city;
     private double money;
     private Currency currency;
-    private ArrayList<сomputerGame> games = new ArrayList<сomputerGame>();
+    private ArrayList<СomputerGame> games = new ArrayList<СomputerGame>();
 
     public String getName() {
         return name;
@@ -43,11 +43,11 @@ public class Customer {
         this.currency = currency;
     }
 
-    public ArrayList<сomputerGame> getGames() {
+    public ArrayList<СomputerGame> getGames() {
         return  new ArrayList<>(games);
     }
 
-    public boolean addGameToHistory(сomputerGame game) {
+    public boolean addGameToHistory(СomputerGame game) {
         if(games.add(game)) {
             return true;
         }

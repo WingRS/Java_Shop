@@ -1,7 +1,7 @@
 /**
  * Created by StasMaster on 06.11.17.
  */
-public class сomputerGamesParams {
+public class СomputerGamesParams {
 
 
     private String name;
@@ -19,7 +19,7 @@ public class сomputerGamesParams {
 
 
 
-    public сomputerGamesParams(сomputerGame game) {
+    public СomputerGamesParams(СomputerGame game) {
         this.name = game.getParams().getName();
         this.genre = game.getParams().getGenre();
         this.descr = game.getParams().getDescr();
@@ -28,7 +28,7 @@ public class сomputerGamesParams {
         this.ageRestriction = game.getParams().getAgeRestriction();
     }
 
-    public сomputerGamesParams(String name, Genre genre, String descr, Double price, Platforms platform, int ageRestriction ) {
+    public СomputerGamesParams(String name, Genre genre, String descr, Double price, Platforms platform, int ageRestriction ) {
 
 
         this.name = name;
@@ -42,7 +42,7 @@ public class сomputerGamesParams {
 
 
 
-    public boolean check(сomputerGamesParams otherParams) {
+    public boolean check(СomputerGamesParams otherParams) {
         if ((name.equals(otherParams.getName())) || (ageRestriction == otherParams.getAgeRestriction())
                 || (price == otherParams.getPrice())  ||
                 ((genre.equals(otherParams.getGenre())) && otherParams.getGenre().equals(genre))
@@ -67,7 +67,7 @@ public class сomputerGamesParams {
     }
 
     public void getGenre(Genre genre) {
-        genre = genre;
+        this.genre = genre;
     }
 
     public String getDescr() {
@@ -83,7 +83,7 @@ public class сomputerGamesParams {
     }
 
     public void setPrice(float price) {
-        price = price;
+        this.price = price;
     }
 
     public Platforms getPlatform() {
