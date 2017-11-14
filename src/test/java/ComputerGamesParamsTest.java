@@ -31,19 +31,22 @@ public class сomputerGamesParamsTest {
 
     @Test
     public void check() throws Exception {
+        assertFalse(param1.check(param2));
     }
 
     @Test
     public void getName() throws Exception {
-
+        assertFalse(param1.getName() == param2.getName());
     }
 
     @Test
     public void setName() throws Exception {
+
     }
 
     @Test
     public void getGenre() throws Exception {
+        assertFalse(param1.getGenre().toString().equals(param2.getGenre().toString()));
     }
 
     @Test
@@ -52,6 +55,7 @@ public class сomputerGamesParamsTest {
 
     @Test
     public void getDescr() throws Exception {
+        assertFalse(param1.getDescr() == param2.getDescr());
     }
 
     @Test
@@ -60,14 +64,21 @@ public class сomputerGamesParamsTest {
 
     @Test
     public void getPrice() throws Exception {
+        assertFalse(param1.getPrice() == param2.getPrice());
     }
 
     @Test
     public void setPrice() throws Exception {
+        double price = 23.45;
+        param1.setPrice(price);
+        assertTrue(param1.getPrice() == price);
     }
 
     @Test
     public void getPlatform() throws Exception {
+        Platforms os = Platforms.MAC;
+        param1.setPlatform(os);
+        assertTrue(param1.getPlatform().toString() ==  os.toString() );
     }
 
     @Test
@@ -76,6 +87,7 @@ public class сomputerGamesParamsTest {
 
     @Test
     public void getAgeRestriction() throws Exception {
+        assertFalse(param1.getAgeRestriction() == param2.getAgeRestriction());
     }
 
     @Test

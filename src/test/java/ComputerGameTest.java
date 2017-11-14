@@ -7,13 +7,13 @@ import static org.junit.Assert.*;
  * Created by StasMaster on 13.11.17.
  */
 public class сomputerGameTest {
-    private СomputerGame game1, game2;
+    private ComputerGame game1, game2;
 
 
     @Before
     public void setUp() throws Exception {
-        game1 = new СomputerGame( GamesForTests.GameParams1());
-        game2 = new СomputerGame( GamesForTests.GameParams2());
+        game1 = new ComputerGame( GamesForTests.GameParams1());
+        game2 = new ComputerGame( GamesForTests.GameParams2());
     }
 
     @Test
@@ -30,10 +30,12 @@ public class сomputerGameTest {
 
     @Test
     public void getGameId() throws Exception {
+        assertFalse(game1.getGameId() == game2.getGameId());
     }
 
     @Test
     public void getParams() throws Exception {
+        assertFalse(game1.getParams().getPrice() == game2.getParams().getPrice());
     }
 
 }
