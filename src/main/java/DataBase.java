@@ -33,7 +33,7 @@ public class DataBase {
     }
 
 
-    public ArrayList<ComputerGame>  search(СomputerGamesParams searched) {
+    public ArrayList<ComputerGame>  search(ComputerGamesParams searched) {
 
         ArrayList<ComputerGame> found = new ArrayList<ComputerGame>();
         for (ComputerGame game: games) {

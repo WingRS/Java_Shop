@@ -6,9 +6,9 @@ public class ComputerGame {
     private static int idCounter = 0;
 
     private final int gameId;
-    private final СomputerGamesParams params;
+    private final ComputerGamesParams params;
 
-    public ComputerGame(СomputerGamesParams gameParams) {
+    public ComputerGame(ComputerGamesParams gameParams) {
         this.gameId = ComputerGame.idCounter++;
         this.params = gameParams;
     }
@@ -17,7 +17,7 @@ public class ComputerGame {
         return gameId;
     }
 
-    public СomputerGamesParams getParams() {
+    public ComputerGamesParams getParams() {
         return params;
     }
 

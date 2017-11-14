@@ -1,7 +1,7 @@
 /**
  * Created by StasMaster on 06.11.17.
  */
-public class СomputerGamesParams {
+public class ComputerGamesParams {
 
 
     private String name;
@@ -19,7 +19,7 @@ public class СomputerGamesParams {
 
 
 
-    public СomputerGamesParams(ComputerGame game) {
+    public ComputerGamesParams(ComputerGame game) {
         this.name = game.getParams().getName();
         this.genre = game.getParams().getGenre();
         this.descr = game.getParams().getDescr();
@@ -28,7 +28,7 @@ public class СomputerGamesParams {
         this.ageRestriction = game.getParams().getAgeRestriction();
     }
 
-    public СomputerGamesParams(String name, Genre genre,
+    public ComputerGamesParams(String name, Genre genre,
                                String descr, Double price,
                                Platforms platform,
                                int ageRestriction) {
@@ -45,7 +45,7 @@ public class СomputerGamesParams {
 
 
 
-    public boolean check(СomputerGamesParams otherParams) {
+    public boolean check(ComputerGamesParams otherParams) {
         if ((name.equals(otherParams.getName()))
                 || (ageRestriction == otherParams.getAgeRestriction())
                 || (price == otherParams.getPrice())
