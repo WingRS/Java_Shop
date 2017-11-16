@@ -41,6 +41,8 @@ public class ComputerGamesParamsTest {
 
     @Test
     public void setName() throws Exception {
+        param1.setName("this is a game");
+        assertTrue(param1.getName().equals("this is a game"));
 
     }
 
@@ -51,15 +53,19 @@ public class ComputerGamesParamsTest {
 
     @Test
     public void setGenre() throws Exception {
+        param1.setGenre(Genre.SIMULATION);
+        assertTrue(param1.getGenre().toString().equals(Genre.SIMULATION.toString()));
     }
 
     @Test
     public void getDescr() throws Exception {
-        assertFalse(param1.getDescr() == param2.getDescr());
+        assertFalse(param1.getDescr().equals(param2.getDescr()));
     }
 
     @Test
     public void setDescr() throws Exception {
+        param1.setDescr("this is a descr");
+        assertTrue(param1.getDescr().equals("this is a descr"));
     }
 
     @Test
@@ -78,11 +84,13 @@ public class ComputerGamesParamsTest {
     public void getPlatform() throws Exception {
         Platforms os = Platforms.MAC;
         param1.setPlatform(os);
-        assertTrue(param1.getPlatform().toString() ==  os.toString() );
+        assertTrue(param1.getPlatform().toString().equals(os.toString()));
     }
 
     @Test
     public void setPlatform() throws Exception {
+        param1.setPlatform(Platforms.MAC);
+        assertTrue(param1.getPlatform().toString().equals(Platforms.MAC.toString()));
     }
 
     @Test
@@ -92,6 +100,8 @@ public class ComputerGamesParamsTest {
 
     @Test
     public void setAgeRestriction() throws Exception {
+        param1.setAgeRestriction(20);
+        assertTrue(param1.getAgeRestriction() == 20);
     }
 
 

@@ -13,30 +13,32 @@ public class Cart {
 
     private ArrayList<ComputerGame> games = new ArrayList<>();
 
-    public Cart( ArrayList<ComputerGame> games, Customer customer) {
+    public Cart(ArrayList<ComputerGame> games, Customer customer) {
         this.games = games;
         this.customer = customer;
     }
 
     public Cart(Customer customer) {
-        this.customer =customer;
+        this.customer = customer;
     }
 
-    public Cart(Customer customer, ArrayList<ComputerGame> games, PaymentStrategy payStrat, DeliveryStrategy delStrat) {
+    public Cart(Customer customer, ArrayList<ComputerGame> games,
+                PaymentStrategy payStrat, DeliveryStrategy delStrat) {
         this.customer = customer;
         this.games = games;
         this.delivery = delStrat;
         this.payment = payStrat;
     }
 
-    public Cart(Customer customer, ComputerGame game, PaymentStrategy payStrat, DeliveryStrategy delStrat) {
+    public Cart(Customer customer, ComputerGame game,
+                PaymentStrategy payStrat, DeliveryStrategy delStrat) {
         this.customer = customer;
         this.games.add(game);
         this.delivery = delStrat;
         this.payment = payStrat;
     }
 
-    public Cart(Customer customer, ComputerGame game){
+    public Cart(Customer customer, ComputerGame game) {
         this.customer = customer;
         this.games.add(game);
     }
@@ -45,24 +47,28 @@ public class Cart {
         return payment;
     }
 
-    public void setPayment(PaymentStrategy payment) {
+    public boolean setPayment(PaymentStrategy payment) {
         this.payment = payment;
+        return true;
     }
 
     public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public boolean setCustomer(Customer customer) {
         this.customer = customer;
+        return true;
     }
 
     public DeliveryStrategy getDelivery() {
         return delivery;
     }
 
-    public void setDelivery(DeliveryStrategy delivery) {
+    public boolean setDelivery(DeliveryStrategy delivery) {
+
         this.delivery = delivery;
+        return true;
     }
 
     public boolean removeGameFromCart(ComputerGame game) {
@@ -88,9 +94,11 @@ public class Cart {
         return price;
     }
 
-    public void ship() {
+    public boolean ship() {
         if(payment.pay(computeTotalPrice())) {
-            delivery.delivery(games);
+            delivery.delivery();
+            return true;
         }
+        return false;
     }
 }

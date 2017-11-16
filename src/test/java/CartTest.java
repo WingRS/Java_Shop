@@ -3,9 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by StasMaster on 13.11.17.
- */
+
 public class CartTest {
 
     private Cart cart1,cart2;
@@ -15,6 +13,8 @@ public class CartTest {
         cart1 = CartInit.getCartOne();
         cart2 = CartInit.gatCartTwo();
         cart1.setPayment(new PayPalStrategy());
+        cart1.setDelivery(new DhlDelivery());
+        cart2.setDelivery(new DhlDelivery());
         cart2.setPayment(new PayPalStrategy());
     }
 
@@ -22,9 +22,6 @@ public class CartTest {
     public void getPayment() throws Exception {
         assertTrue(cart1.getPayment().toString().equals(cart2.getPayment().toString()));
     }
-
-
-
     @Test
     public void getCustomer() throws Exception {
         assertFalse(cart1.getCustomer().getName().equals(cart2.getCustomer().getName()));
@@ -32,15 +29,17 @@ public class CartTest {
 
     @Test
     public void setCustomer() throws Exception {
+        assertTrue(cart1.setCustomer(CustomerInit.createCustomer2()));
     }
 
     @Test
     public void getDelivery() throws Exception {
-
+        assertTrue(cart1.getDelivery().toString().equals(new DhlDelivery().toString()));
     }
 
     @Test
     public void setDelivery() throws Exception {
+        assertTrue(cart1.setDelivery(new DhlDelivery()));
     }
 
     @Test
@@ -61,6 +60,7 @@ public class CartTest {
 
     @Test
     public void ship() throws Exception {
+        assertFalse(cart1.ship());
     }
 
 }

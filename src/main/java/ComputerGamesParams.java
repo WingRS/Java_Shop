@@ -32,8 +32,6 @@ public class ComputerGamesParams {
                                String descr, Double price,
                                Platforms platform,
                                int ageRestriction) {
-
-
         this.name = name;
         this.genre = genre;
         this.descr = descr;
@@ -64,24 +62,27 @@ public class ComputerGamesParams {
         return name;
     }
 
-    public void setName(String name) {
+    public boolean setName(String name) {
         this.name = name;
+        return true;
     }
 
     public Genre getGenre() {
         return genre;
     }
 
-    public void getGenre(Genre genre) {
+    public boolean setGenre(Genre genre) {
         this.genre = genre;
+        return true;
     }
 
     public String getDescr() {
         return descr;
     }
 
-    public void setDescr(String descr) {
+    public boolean setDescr(String descr) {
         this.descr = descr;
+        return true;
     }
 
     public double getPrice() {
@@ -97,16 +98,18 @@ public class ComputerGamesParams {
         return platform;
     }
 
-    public void setPlatform(Platforms platform) {
+    public boolean setPlatform(Platforms platform) {
         this.platform = platform;
+        return true;
     }
 
     public int getAgeRestriction() {
         return ageRestriction;
     }
 
-    public void setAgeRestriction(int ageRestriction) {
+    public boolean setAgeRestriction(int ageRestriction) {
         this.ageRestriction = ageRestriction;
+        return true;
     }
 
 }
