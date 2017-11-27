@@ -1,3 +1,5 @@
+package Shop;
+
 import java.util.ArrayList;
 
 /**
@@ -46,8 +48,9 @@ public class Customer {
         return money;
     }
 
-    public void setMoney(double money) {
+    public boolean setMoney(double money) {
         this.money = money;
+        return false;
     }
 
     public Currency getCurrency() {

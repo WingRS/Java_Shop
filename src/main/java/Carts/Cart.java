@@ -1,3 +1,10 @@
+package Carts;
+
+import Delivery.DeliveryStrategy;
+import Payment.PaymentStrategy;
+import Shop.ComputerGame;
+import Shop.Customer;
+
 import java.util.ArrayList;
 
 /**
@@ -12,6 +19,8 @@ public class Cart {
     private DeliveryStrategy delivery;
 
     private ArrayList<ComputerGame> games = new ArrayList<>();
+
+
 
     public Cart(ArrayList<ComputerGame> games, Customer customer) {
         this.games = games;
@@ -28,6 +37,15 @@ public class Cart {
         this.games = games;
         this.delivery = delStrat;
         this.payment = payStrat;
+    }
+
+
+    public Cart(Cart cart) {
+        this.customer = cart.getCustomer();
+        this.payment = cart.getPayment();
+        this.games.addAll(cart.getGames());
+        this.delivery = cart.getDelivery();
+
     }
 
     public Cart(Customer customer, ComputerGame game,
@@ -61,6 +79,9 @@ public class Cart {
         return true;
     }
 
+
+
+
     public DeliveryStrategy getDelivery() {
         return delivery;
     }
@@ -86,6 +107,19 @@ public class Cart {
         return true;
     }
 
+
+    public boolean addGameToCart(ArrayList<ComputerGame> games) {
+        if (games.addAll(games)) {
+            return true;
+        }
+        return false;
+    }
+
+    public ArrayList<ComputerGame> getGames() {
+        return  new ArrayList<>(games);
+    }
+
+
     public double computeTotalPrice() {
         double price = 0;
         for (ComputerGame curInstance: games) {
@@ -94,11 +128,21 @@ public class Cart {
         return price;
     }
 
-    public boolean ship() {
-        if(payment.pay(computeTotalPrice())) {
+    public boolean ship(ArrayList<ComputerGame> games) {
+        if(payment.pay(computeTotalPrice(),customer)) {
             delivery.delivery();
             return true;
         }
         return false;
+    }
+
+
+
+    public boolean pay() {
+        double pay = computeTotalPrice();
+        if(pay > customer.getMoney()){
+            return false;
+        }
+        return payment.pay(pay, customer);
     }
 }

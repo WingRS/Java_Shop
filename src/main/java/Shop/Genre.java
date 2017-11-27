@@ -1,3 +1,5 @@
+package Shop;
+
 /**
  * Created by StasMaster on 06.11.17.
  */
@@ -17,8 +19,11 @@ public enum Genre {
     }
 
 
+
     public String getName() {
         return name;
     }
+
+
 }
 

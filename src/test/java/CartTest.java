@@ -1,3 +1,9 @@
+import Carts.BonusCart;
+import Carts.Cart;
+import Carts.DiscountCart;
+import Delivery.DhlDelivery;
+import Payment.PayPalStrategy;
+import Shop.ComputerGame;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -6,17 +12,38 @@ import static org.junit.Assert.*;
 
 public class CartTest {
 
-    private Cart cart1,cart2;
+    private Cart cart1,cart2,cart, cartBonus;
 
     @Before
     public void setUp() throws Exception {
-        cart1 = CartInit.getCartOne();
-        cart2 = CartInit.gatCartTwo();
+        cart1   = CartInit.getCartOne();
+        cart2   = CartInit.gatCartTwo();
+        cart    = new DiscountCart(cart1);
+        cartBonus = new BonusCart(cart1);
         cart1.setPayment(new PayPalStrategy());
         cart1.setDelivery(new DhlDelivery());
         cart2.setDelivery(new DhlDelivery());
         cart2.setPayment(new PayPalStrategy());
     }
+
+    @Test
+    public void checkPrice() throws Exception {
+        double price1 = cart1.computeTotalPrice();
+        double price2 = cart.computeTotalPrice();
+        System.out.println(price1);
+        System.out.println(price2);
+
+        assertTrue(price1>price2);
+    }
+
+    @Test
+    public void checkShipment() {
+        cart1.ship(cart1.getGames());
+        cartBonus.ship(cartBonus.getGames());
+        System.out.println("first " + cart1.getGames().size() +  " second " + cartBonus.getGames().size());
+        assertTrue(cartBonus.getGames().size() == cart1.getGames().size());
+    }
+
 
     @Test
     public void getPayment() throws Exception {
@@ -60,7 +87,13 @@ public class CartTest {
 
     @Test
     public void ship() throws Exception {
-        assertFalse(cart1.ship());
+        assertFalse(cart1.ship(cart1.getGames()));
     }
+
+    @Test
+    public void Testdecorator() throws Exception {
+
+    }
+
 
 }

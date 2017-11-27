@@ -1,3 +1,5 @@
+package Shop;
+
 /**
  * Created by StasMaster on 06.11.17.
  */
@@ -112,4 +114,32 @@ public class ComputerGamesParams {
         return true;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ComputerGamesParams that = (ComputerGamesParams) o;
+
+        if (Double.compare(that.price, price) != 0) return false;
+        if (ageRestriction != that.ageRestriction) return false;
+        if (!name.equals(that.name)) return false;
+        if (genre != that.genre) return false;
+        if (!descr.equals(that.descr)) return false;
+        return platform == that.platform;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = name.hashCode();
+        result = 31 * result + genre.hashCode();
+        result = 31 * result + descr.hashCode();
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + platform.hashCode();
+        result = 31 * result + ageRestriction;
+        return result;
+    }
 }

@@ -1,3 +1,5 @@
+package Shop;
+
 /**
  * Created by StasMaster on 06.11.17.
  */

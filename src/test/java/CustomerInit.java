@@ -1,3 +1,7 @@
+import Shop.ComputerGame;
+import Shop.Currency;
+import Shop.Customer;
+
 /**
  * Created by StasMaster on 15.11.17.
  */

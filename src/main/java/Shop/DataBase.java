@@ -1,3 +1,5 @@
+package Shop;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,10 @@ public class DataBase {
 
     }
 
+    public DataBase(List<ComputerGame> games) {
+        this.addToDb(games);
+    }
+
     public boolean addToDb(ComputerGame game) {
         if(games.add(game)) {
             return true;
@@ -19,7 +25,7 @@ public class DataBase {
         return false;
     }
 
-    public boolean addToDb(ArrayList<ComputerGame> games) {
+    public boolean addToDb(List<ComputerGame> games) {
         if(this.games.addAll(games)) {
             return true;
         }
@@ -42,6 +48,17 @@ public class DataBase {
             }
         }
         return found;
+
+    }
+
+    public static void main(String[] args) {
+        ArrayList<ComputerGame> games = new ArrayList<>();
+        ComputerGamesParams params = new ComputerGamesParams("dota", Genre.SIMULATION, "DEASDSA", 232.2, Platforms.LINUX,12);
+        for(int i = 0; i<7; i++) {
+            games.add(new ComputerGame(params));
+        }
+        DataBase db = new DataBase(games);
+        System.out.println(db.getGames().size());
 
     }
 }
