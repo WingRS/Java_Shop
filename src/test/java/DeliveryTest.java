@@ -15,7 +15,7 @@ public class DeliveryTest {
         DeliveryStrategy deliveryStrategy2 = new DhlDelivery();
         assertTrue(deliveryStrategy1.delivery());
         assertTrue(deliveryStrategy2.delivery());
-        assertEquals(deliveryStrategy1.toString(),"DHL");
+        assertEquals(deliveryStrategy2.toString(),"DHL");
         assertEquals(deliveryStrategy1.toString(),"Nova Poshta");
 
     }
