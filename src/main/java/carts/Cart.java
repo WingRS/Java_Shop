@@ -108,8 +108,8 @@ public class Cart {
     }
 
 
-    public boolean addGameToCart(ArrayList<ComputerGame> games) {
-        if (games.addAll(games)) {
+    public boolean addGameToCart(ArrayList<ComputerGame> gamesToAdd) {
+        if (games.addAll(gamesToAdd)) {
             return true;
         }
         return false;
