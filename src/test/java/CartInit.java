@@ -1,5 +1,5 @@
-import Carts.Cart;
-import Shop.ComputerGame;
+import carts.Cart;
+import shop.ComputerGame;
 
 /**
  * Created by StasMaster on 15.11.17.

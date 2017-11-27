@@ -1,6 +1,6 @@
-import Shop.ComputerGamesParams;
-import Shop.Genre;
-import Shop.Platforms;
+import shop.ComputerGamesParams;
+import shop.Genre;
+import shop.Platforms;
 import org.junit.Before;
 import org.junit.Test;
 

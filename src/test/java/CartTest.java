@@ -1,9 +1,9 @@
-import Carts.BonusCart;
-import Carts.Cart;
-import Carts.DiscountCart;
-import Delivery.DhlDelivery;
-import Payment.PayPalStrategy;
-import Shop.ComputerGame;
+import carts.BonusCart;
+import carts.Cart;
+import carts.DiscountCart;
+import delivery.DhlDelivery;
+import payment.PayPalStrategy;
+import shop.ComputerGame;
 import org.junit.Before;
 import org.junit.Test;
 

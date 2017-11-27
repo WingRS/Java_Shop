@@ -1,6 +1,4 @@
-package Delivery;
-
-import java.util.ArrayList;
+package delivery;
 
 /**
  * Created by StasMaster on 13.11.17.

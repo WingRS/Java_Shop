@@ -1,10 +1,9 @@
-package Carts;
+package carts;
 
-import Carts.Cart;
-import Delivery.DeliveryStrategy;
-import Payment.PaymentStrategy;
-import Shop.ComputerGame;
-import Shop.Customer;
+import delivery.DeliveryStrategy;
+import payment.PaymentStrategy;
+import shop.ComputerGame;
+import shop.Customer;
 
 import java.util.ArrayList;
 
@@ -15,7 +14,7 @@ public abstract class CartDecorator extends Cart {
 
     private Cart cart;
 
-    public CartDecorator(Cart cart ) {
+    public CartDecorator(Cart cart) {
         super(cart);
         this.cart = cart;
     }

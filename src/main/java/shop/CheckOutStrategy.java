@@ -1,7 +1,6 @@
-package Shop;
+package shop;
 
-import Payment.PaymentStrategy;
-import Shop.Customer;
+import payment.PaymentStrategy;
 
 /**
  * Created by StasMaster on 13.11.17.

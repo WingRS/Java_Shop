@@ -1,6 +1,6 @@
-package Payment;
+package payment;
 
-import Shop.Customer;
+import shop.Customer;
 
 /**
  * Created by StasMaster on 13.11.17.
@@ -11,7 +11,7 @@ public class PayPalStrategy implements PaymentStrategy  {
     @Override
     public boolean pay(double price, Customer customer) {
         System.out.println("THIS IS PAYPAL");
-        if(customer.setMoney(customer.getMoney()-price)){
+        if(customer.setMoney(customer.getMoney()-price)) {
             return true;
         }
         return  false;

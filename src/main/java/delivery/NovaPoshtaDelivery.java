@@ -1,4 +1,4 @@
-package Delivery;
+package delivery;
 
 /**
  * Created by StasMaster on 27.11.17.

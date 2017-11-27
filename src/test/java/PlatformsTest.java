@@ -1,4 +1,4 @@
-import Shop.Platforms;
+import shop.Platforms;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package Shop;
+package shop;
 
 /**
  * Created by StasMaster on 06.11.17.
@@ -48,7 +48,7 @@ public class ComputerGamesParams {
     public boolean check(ComputerGamesParams otherParams) {
         if ((name.equals(otherParams.getName()))
                 || (ageRestriction == otherParams.getAgeRestriction())
-                || (price == otherParams.getPrice())
+                || ( price == otherParams.getPrice())
                 || ((genre.equals(otherParams.getGenre()))
                 && otherParams.getGenre().equals(genre))
                 || ((platform.equals(otherParams.getPlatform())
@@ -116,16 +116,16 @@ public class ComputerGamesParams {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) { return true; }
+        if (o == null || getClass() != o.getClass()) { return false; }
 
         ComputerGamesParams that = (ComputerGamesParams) o;
 
-        if (Double.compare(that.price, price) != 0) return false;
-        if (ageRestriction != that.ageRestriction) return false;
-        if (!name.equals(that.name)) return false;
-        if (genre != that.genre) return false;
-        if (!descr.equals(that.descr)) return false;
+        if (Double.compare(that.price, price) != 0) { return false; }
+        if (ageRestriction != that.ageRestriction) { return false; }
+        if (!name.equals(that.name)) { return false; }
+        if (genre != that.genre) { return false; }
+        if (!descr.equals(that.descr)) { return false; }
         return platform == that.platform;
     }
 

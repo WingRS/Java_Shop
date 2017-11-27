@@ -1,4 +1,4 @@
-package Shop;
+package shop;
 
 /**
  * Created by StasMaster on 13.11.17.

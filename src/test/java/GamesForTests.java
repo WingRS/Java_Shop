@@ -1,7 +1,7 @@
-import Shop.ComputerGame;
-import Shop.ComputerGamesParams;
-import Shop.Genre;
-import Shop.Platforms;
+import shop.ComputerGame;
+import shop.ComputerGamesParams;
+import shop.Genre;
+import shop.Platforms;
 
 import java.util.ArrayList;
 

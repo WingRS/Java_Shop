@@ -1,6 +1,6 @@
-import Delivery.DeliveryStrategy;
-import Delivery.DhlDelivery;
-import Delivery.NovaPoshtaDelivery;
+import delivery.DeliveryStrategy;
+import delivery.DhlDelivery;
+import delivery.NovaPoshtaDelivery;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

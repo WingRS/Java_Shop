@@ -1,9 +1,9 @@
-package Carts;
+package carts;
 
-import Delivery.DeliveryStrategy;
-import Payment.PaymentStrategy;
-import Shop.ComputerGame;
-import Shop.Customer;
+import delivery.DeliveryStrategy;
+import payment.PaymentStrategy;
+import shop.ComputerGame;
+import shop.Customer;
 
 import java.util.ArrayList;
 
@@ -129,7 +129,7 @@ public class Cart {
     }
 
     public boolean ship(ArrayList<ComputerGame> games) {
-        if(payment.pay(computeTotalPrice(),customer)) {
+        if(payment.pay(computeTotalPrice(), customer)) {
             delivery.delivery();
             return true;
         }
@@ -140,7 +140,7 @@ public class Cart {
 
     public boolean pay() {
         double pay = computeTotalPrice();
-        if(pay > customer.getMoney()){
+        if(pay > customer.getMoney()) {
             return false;
         }
         return payment.pay(pay, customer);

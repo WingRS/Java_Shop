@@ -1,6 +1,6 @@
-package Payment;
+package payment;
 
-import Shop.Customer;
+import shop.Customer;
 
 /**
  * Created by StasMaster on 13.11.17.

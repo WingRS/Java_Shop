@@ -1,5 +1,4 @@
-import Payment.PayPalStrategy;
-import Payment.PaymentStrategy;
+import payment.PayPalStrategy;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +16,7 @@ public class PayPalStrategyTest {
 
     @Test
     public void pay() throws Exception {
-        assertTrue(strategy.pay(20, CustomerInit.createCustomer1()));
+        assertFalse(strategy.pay(20, CustomerInit.createCustomer1()));
     }
 
     @Test

@@ -1,7 +1,4 @@
-package Carts;
-
-import Carts.Cart;
-import Carts.CartDecorator;
+package carts;
 
 /**
  * Created by StasMaster on 27.11.17.

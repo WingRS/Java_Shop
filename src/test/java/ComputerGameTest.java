@@ -1,4 +1,4 @@
-import Shop.ComputerGame;
+import shop.ComputerGame;
 import org.junit.Before;
 import org.junit.Test;
 

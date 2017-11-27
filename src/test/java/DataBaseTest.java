@@ -1,5 +1,5 @@
-import Shop.ComputerGame;
-import Shop.DataBase;
+import shop.ComputerGame;
+import shop.DataBase;
 import org.junit.Before;
 import org.junit.Test;
 
